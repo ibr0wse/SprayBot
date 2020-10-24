@@ -1,7 +1,7 @@
 # SprayBot
 Selenium password spraying script.
 
-Fully-automated browser-driven password sprayer that accepts element XPATHs for spraying.
+Fully-automated browser-driven password sprayer that accepts element XPaths for spraying.
 
 ## Requirements
 * Windows\Linux\Mac (Designed to be in a VM, tested in Windows but should work for any distro with python3+chrome)
@@ -12,13 +12,13 @@ Fully-automated browser-driven password sprayer that accepts element XPATHs for 
 * Proxy (Burp)
     - Hard to discern if a credential was successful or not for different web apps, best to filter for that in burp yourself
 
-## XPATHs
-Inspect each `username`, `password`, and `submit` button boxes of the web app to copy its XPATH into a file before running the bot ((XPATH is case sensitive):
+## XPaths
+Inspect each `username`, `password`, and `submit` button boxes of the web app to copy its XPath into a file before running the bot (XPATH is case sensitive):
 - `//*[@id="username"]`
 - `//*[@id="password"]`
 - `/html/body/div/main/div/div/div/div[2]/div[1]/div[3]/div/form/div[4]/button`
 
-SprayBot will take the above as separate inputs to perform a faster web browser driven spray. Can put into a file and load instead of inputting to command line (in the same order as the above example for each line: username, password, submit boxes)
+SprayBot will take the above as separate inputs. Can put into a file and load instead of inputting to command line (in the same order as the above example for each line: username, password, submit boxes)
 
 
 # Install
@@ -73,6 +73,6 @@ optional arguments:
                         Seeded DELAY between initial request & SprayBot's first instruction (DEFAULT:5)
   -s PAUSE, --pause PAUSE
                         Seeded PAUSE between SprayBot's keypresses (DEFAULT:1)
-  -f FILE, --file FILE  Read XPATHs from file instead of inputing to prompt
+  -f FILE, --file FILE  Read XPaths from file instead of inputing to prompt
 ```
 
